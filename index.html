@@ -7,8 +7,11 @@
     <link rel="icon" type="favicon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"/>
     <link rel="stylesheet" href="styles.css" />
+    
   </head>
 <body>
+  <div id="loader"></div>
+  <div id="fixed-image"></div>
     <div id="main">
       <div id="page1">
         <nav>
@@ -34,8 +37,7 @@
         <video autoplay loop muted src="./web.mp4"</video>
         </div>
         <div>
-          <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-          <script src="script.js"></script>
+          
         </div>
       </div>
     
@@ -79,37 +81,43 @@
       </div>
 
       <div id="page3">
-        <div class="elem">
-          <div class="overlay"></div>
-          <h2>Makers Studio HOI</h2>
+        <div id="elem-container">
+          <div id = "elem1" class="elem" img-src ="https://images.unsplash.com/photo-1729037049420-fd0ead54286a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D">
+            <!-- <div class="project-img"><img src="data-image="https://images.unsplash.com/photo-1729037049420-fd0ead54286a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D"</div> -->
+            <div class="overlay"></div>
+            <h2>Makers Studio HOI</h2>
+          </div>
+          <div class="elem" data-image="https://images.unsplash.com/photo-1721332154373-17e78d19b4a4?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            <div class="overlay"></div>
+            <h2>50th Anniversary</h2>
+          </div>
+          <div class="elem" data-image="https://images.unsplash.com/photo-1727833369293-fbc74e2819cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE2fE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D">
+            <div class="overlay"></div>
+            <h2>NYFW Popup</h2>
+          </div>
+          <div class="elem" data-image="https://plus.unsplash.com/premium_photo-1699537318938-7af01500c359?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI0fE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D">
+            <div class="overlay"></div>
+            <h2>Air Force 12021</h2>
+          </div>
+          <div class="elem" data-image="https://images.unsplash.com/photo-1728615384779-8b3dc0e8f412?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQyfE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D">
+            <div class="overlay"></div>
+            <h2>SOHO NYC</h2>
+          </div>
+          <div class="elem" data-image="https://images.unsplash.com/photo-1728819751259-dbc3749fde5f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDU5fE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D">
+            <div class="overlay"></div>
+            <h2>SOHO 2023</h2>
+          </div>
+          <div class="elem" data-image="https://images.unsplash.com/photo-1728570609700-31d2549f07e9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQ0fE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D">
+            <div class="overlay"></div>
+            <h2>Play New Kidvision</h2>
+          </div>
         </div>
-        <div class="elem">
-          <div class="overlay"></div>
-          <h2>50th Anniversary</h2>
         </div>
-        <div class="elem">
-          <div class="overlay"></div>
-          <h2>NYFW Popup</h2>
-        </div>
-        <div class="elem">
-          <div class="overlay"></div>
-          <h2>Air Force 12021</h2>
-        </div>
-        <div class="elem">
-          <div class="overlay"></div>
-          <h2>SOHO NYC</h2>
-        </div>
-        <div class="elem">
-          <div class="overlay"></div>
-          <h2>SOHO 2023</h2>
-        </div>
-        <div class="elem">
-          <div class="overlay"></div>
-          <h2>Play New Kidvision</h2>
-        </div>
-      </div>
         
-        </div>
-    
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js" integrity="sha512-+LXqbM6YLduaaxq6kNcjMsQgZQUTdZp7FTaArWYFt1nxyFKlQSMdIF/WQ/VgsReERwRD8w/9H9cahFx25UDd+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
