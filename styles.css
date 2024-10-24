@@ -33,7 +33,7 @@ body {
   position: relative;
 }
 #main {
-  height: 700%;
+  height: auto;
   width: 100%;
 }
 nav {
@@ -361,8 +361,8 @@ nav {
   }
 }
 #page3 {
-  height: 100vw;
-  width: 100%;
+  min-height: 100vh;
+  min-width: 100%;
   /* display: flex; */
   justify-content: center;
   background-color: #efeae3;
